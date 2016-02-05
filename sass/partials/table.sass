@@ -1,0 +1,282 @@
+#games
+    border-spacing: 0
+    margin: 33px 160px 20px 10px
+    padding: 0
+    width: calc(100% - 170px)
+
+#games thead
+    background: #333
+    left: 10px
+    padding: 4px 0
+    position: fixed
+    top: 0
+    width: 1000%
+    z-index: 1
+
+#games th
+    cursor: pointer
+    padding: 0
+    line-height: 2em
+
+#games th.sort-active:after
+    content: "\25BE"
+    margin-left: 4px
+    font-size: 10px
+    position: relative
+    display: inline-block
+
+#games th.sort-active.desc:after
+    content: "\25B4"
+    top: -4px
+
+#games tr
+    margin: 0
+
+#games td
+    border: 1px solid
+    padding: 6px
+    position: relative
+    white-space: nowrap
+
+
+.edit #games td
+    cursor: pointer
+
+#games .description
+    background: url(img/screen.png)
+    cursor: pointer
+    display: none
+    height: 16px
+    position: absolute
+    right: 4px
+    top: 5px
+    width: 16px
+
+.edit #games .description
+    display: block
+    opacity: .2
+
+.edit #games .description.checked
+    opacity: .5
+
+.checkable
+    display: none !important
+
+.edit .checkable
+    cursor: pointer
+    display: block !important
+    opacity: .2
+
+.checkable.checked
+    display: block !important
+    opacity: .7
+
+.completed
+    font-size: 20px
+    height: 16px
+    position: absolute
+    right: 4px
+    top: 6px
+
+.edit #games .completed
+    right: 25px
+
+#new-item td
+    text-align: center
+
+#new-item td,
+#games [data-service="steam"] td
+    background: #777
+    border-color: #aaa
+    border-bottom-color: #555
+    border-right-color: #555
+
+#games [data-service="steam"] td.editing
+    background: #888
+
+#games [data-service="steam"] td.title .service-icon,
+.service-icon[data-service="steam"]
+    background-image: url(img/steam.ico)
+
+#games [data-service="gog"] td
+    background: #866182
+    border-color: #b785b3
+    border-bottom-color: #5d425a
+    border-right-color: #5d425a
+
+#games [data-service="gog"] td.editing
+    background: #9a6f95
+
+#games [data-service="gog"] td.title .service-icon,
+.service-icon[data-service="gog"]
+    background-image: url(img/gog.ico)
+
+#games [data-service="uplay"] td
+    background: #7185a6
+    border-color: #8ea7d1
+    border-bottom-color: #4d5b71
+    border-right-color: #4d5b71
+
+#games [data-service="uplay"] td.editing
+    background: #7f95bb
+
+#games [data-service="uplay"] td.title .service-icon,
+.service-icon[data-service="uplay"]
+    background-image: url(img/uplay.ico)
+
+#games [data-service="origin"] td
+    background: #927452
+    border-color: #bd966a
+    border-bottom-color: #6a543c
+    border-right-color: #6a543c
+
+#games [data-service="origin"] td.editing
+    background: #a4825c
+
+#games [data-service="origin"] td.title .service-icon,
+.service-icon[data-service="origin"]
+    background-image: url(img/origin.ico)
+    opacity: 1
+
+#games [data-service="nodrm"] td
+    background: #8a8989
+    border-color: #b9b9b9
+    border-bottom-color: #676767
+    border-right-color: #676767
+
+#games [data-service="nodrm"] td.editing
+    background: #929292
+
+#games [data-service="nodrm"] td.title .service-icon,
+.service-icon[data-service="nodrm"]
+    background-image: url(img/nodrm.png)
+
+#games [data-service="ps1"] td,
+#games [data-service="ps2"] td,
+#games [data-service="ps3"] td,
+#games [data-service="ps4"] td,
+#games [data-service="psp"] td
+    background: #626987
+    border-color: #8891bb
+    border-bottom-color: #454a5f
+    border-right-color: #454a5f
+
+#games [data-service="ps1"] td.editing,
+#games [data-service="ps2"] td.editing,
+#games [data-service="ps3"] td.editing,
+#games [data-service="ps4"] td.editing,
+#games [data-service="psp"] td.editing
+    background: #777fa3
+
+#games [data-service="ps1"] td.title .service-icon,
+#games [data-service="ps2"] td.title .service-icon,
+#games [data-service="ps3"] td.title .service-icon,
+#games [data-service="ps4"] td.title .service-icon,
+#games [data-service="psp"] td.title .service-icon,
+.service-icon[data-service="ps1"],
+.service-icon[data-service="ps2"],
+.service-icon[data-service="ps3"],
+.service-icon[data-service="ps4"],
+.service-icon[data-service="psp"]
+    background-image: url(img/ps.png)
+
+#games [data-service="gamecube"] td,
+#games [data-service="wii"] td,
+#games [data-service="wii-u"] td,
+#games [data-service="3ds"] td
+    background: #a16d67
+    border-color: #c6867f
+    border-bottom-color: #78514d
+    border-right-color: #78514d
+
+#games [data-service="gamecube"] td.editing,
+#games [data-service="wii"] td.editing,
+#games [data-service="wii-u"] td.editing,
+#games [data-service="3ds"] td.editing
+    background: #af7670
+
+#games [data-service="gamecube"] td.title .service-icon,
+#games [data-service="wii"] td.title .service-icon,
+#games [data-service="wii-u"] td.title .service-icon,
+#games [data-service="3ds"] td.title .service-icon,
+.service-icon[data-service="gamecube"],
+.service-icon[data-service="wii"],
+.service-icon[data-service="wii-u"],
+.service-icon[data-service="3ds"]
+    opacity: 1
+    background-image: url(img/nintendo.ico)
+
+#games [data-service="xbox"] td,
+#games [data-service="xbox360"] td,
+#games [data-service="xboxone"] td
+    background: #4e7c50
+    border-color: #65a568
+    border-bottom-color: #3a5d3c
+    border-right-color: #3a5d3c
+
+#games [data-service="xbox"] td.editing,
+#games [data-service="xbox360"] td.editing,
+#games [data-service="xboxone"] td.editing
+    background: #5f9761
+
+#games [data-service="xbox"] td.title .service-icon,
+#games [data-service="xbox360"] td.title .service-icon,
+#games [data-service="xboxone"] td.title .service-icon,
+.service-icon[data-service="xbox"],
+.service-icon[data-service="xbox360"],
+.service-icon[data-service="xboxone"]
+    background-image: url(img/xbox.ico)
+
+#games .title
+    padding-left: 28px
+    width: 40%
+
+#games .edition
+    color: rgba(255, 255, 255, .6)
+    font-size: 9px
+    line-height: 9px
+    margin-left: 6px
+
+#games input
+    background: none
+    border: none
+    color: #fff
+    font-size: 1em
+    margin: -1px 0
+    outline: none
+    padding: 0
+    width: 100%
+
+#games .genre
+    width: 230px
+
+#games .developer
+    width: 180px
+
+#games .release
+    text-align: center
+    width: 70px
+
+#games .release input
+    text-align: center
+
+#games .score
+    text-align: center
+    width: 22px
+
+#games .score input
+    text-align: center
+
+#games .tobeat
+    text-align: center
+    width: 32px
+
+#games .tobeat input
+    text-align: center
+
+#games .group td
+    border: none
+    cursor: default
+    font-size: 11px
+    font-weight: bold
+    padding: 12px 4px
